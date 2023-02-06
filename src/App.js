@@ -6,11 +6,12 @@ import {Navbar, Footer, Sidebar, ThemeSettings} from './components';
 import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, 
            Area, Bar, Pie, Financial, Line, ColorPicker, ColorMapping, Editor } from './pages';
 
-
+ //we used the context we provided
+ import { useStateContext } from './contexts/ContextProvider';
 
 
 function App() {
-  const activeMenu = true;
+  const { activeMenu} = useStateContext();
 
   return (
     <div className="App">
@@ -42,7 +43,7 @@ function App() {
             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
               <Navbar />
             </div>
-          </div>
+          
 
           {/* Routing div */}
           <div>
@@ -73,6 +74,7 @@ function App() {
               <Route path="/stacked" element ={<Stacked />} />
               
             </Routes>
+          </div>
           </div>
         </div>
       

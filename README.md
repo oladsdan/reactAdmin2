@@ -27,3 +27,6 @@ import { FiSettings} from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 ### Browser Routers
+
+### Context Api
+ we want to make out context know when we click a specific icon to render the icon properties
